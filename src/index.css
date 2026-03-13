@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0a0c14;
+    --bg-secondary: #0f1220;
+    --bg-card: #131726;
+    --bg-card-hover: #1a2035;
+    --border: #1e2540;
+    --border-subtle: #161b30;
+    --text-primary: #e8eaf0;
+    --text-secondary: #8b93b0;
+    --text-muted: #4f5775;
+    --accent: #2b57ff;
+    --accent-hover: #1438f5;
+    --accent-soft: rgba(43, 87, 255, 0.12);
+    --accent-glow: rgba(43, 87, 255, 0.25);
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #e8eaf0 0%, #2b57ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #527fff 0%, #2b57ff 50%, #8aabff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 30px rgba(43, 87, 255, 0.3);
+  }
+
+  .card-glass {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .card-glass:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(43, 87, 255, 0.3);
+  }
+}
